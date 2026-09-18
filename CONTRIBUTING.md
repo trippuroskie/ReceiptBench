@@ -3,6 +3,22 @@
 Thanks for your interest. ReceiptBench is a small, dependency-light project, and
 the goal is to keep it that way.
 
+## Maintenance status
+
+ReceiptBench is **not actively maintained**. Contributions and bug reports are
+welcome, but there is no promise of a response, release timeline, or ongoing
+compatibility with model providers, OpenRouter, or its dependencies.
+
+## Disclaimer
+
+ReceiptBench is provided for local experimentation and benchmarking only. It is
+not production software, and its accuracy, cost, latency, and throughput
+measurements are estimates that may vary by model, provider, prompt, and input.
+Review outputs before relying on them, and do not upload documents containing
+sensitive information unless you understand and accept the privacy and retention
+policies of the services involved. See the README's [Security](README.md#security)
+section for important limitations, including client-side API key exposure.
+
 ## Setup
 
 ```bash
