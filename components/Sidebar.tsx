@@ -34,7 +34,7 @@ const Sidebar: React.FC<SidebarProps> = ({ currentView, setView }) => {
           <div className="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center shrink-0">
             <i className="fas fa-microscope text-xl"></i>
           </div>
-          {!isCollapsed && <h1 className="text-xl font-bold tracking-tight whitespace-nowrap">LensBench</h1>}
+          {!isCollapsed && <h1 className="text-xl font-bold tracking-tight whitespace-nowrap">ReceiptBench</h1>}
         </div>
         
         <nav className="space-y-1">

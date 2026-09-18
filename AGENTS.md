@@ -1,6 +1,6 @@
-# LensBench – Agent Guide
+# ReceiptBench – Agent Guide
 
-LensBench is a **benchmarking tool for OCR pipelines**. Users evaluate vision/LLM models (via OpenRouter) on receipt images with configurable prompts and ground-truth JSON, and compare accuracy, inference time, cost, and throughput.
+ReceiptBench is a **benchmarking tool for OCR pipelines**. Users evaluate vision/LLM models (via OpenRouter) on receipt images with configurable prompts and ground-truth JSON, and compare accuracy, inference time, cost, and throughput.
 
 ## Stack
 
@@ -10,7 +10,7 @@ LensBench is a **benchmarking tool for OCR pipelines**. Users evaluate vision/LL
   `process.env.OPENROUTER_API_KEY` and `process.env.API_KEY` (the latter is what
   `services/openrouter.ts` actually reads). Setting `API_KEY` in `.env.local` does nothing.
 - **Storage:** localStorage (`ocr_prompts`, `ocr_results`, `ocr_custom_models`) for prompts, results and
-  custom models; IndexedDB (`LensBenchDB` / `receipts`) for images and base64 data
+  custom models; IndexedDB (`ReceiptBenchDB` / `receipts`) for images and base64 data
 
 ## Key Concepts
 

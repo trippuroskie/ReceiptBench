@@ -1,5 +1,5 @@
 /**
- * LensBench — demo data seeder
+ * ReceiptBench — demo data seeder
  * ---------------------------------------------------------------------------
  * Fills the app with synthetic prompts, receipts, and benchmark results so you
  * can explore every view without an API key or a single paid model call.
@@ -12,10 +12,10 @@
  *
  * It writes to:
  *   - localStorage:  ocr_prompts, ocr_results, ocr_custom_models
- *   - IndexedDB:      LensBenchDB / receipts
+ *   - IndexedDB:      ReceiptBenchDB / receipts
  *
  * To wipe the demo data again, run in the console:
- *   localStorage.clear(); indexedDB.deleteDatabase('LensBenchDB'); location.reload();
+ *   localStorage.clear(); indexedDB.deleteDatabase('ReceiptBenchDB'); location.reload();
  *
  * All data is fabricated. The receipt images are drawn on a <canvas> at runtime
  * and use fictional merchants and reserved-for-fiction 555-01xx phone numbers —
@@ -160,7 +160,7 @@
 
   // write to IndexedDB
   await new Promise((resolve, reject) => {
-    const req = indexedDB.open('LensBenchDB', 1);
+    const req = indexedDB.open('ReceiptBenchDB', 1);
     req.onupgradeneeded = () => {
       const db = req.result;
       if (!db.objectStoreNames.contains('receipts')) db.createObjectStore('receipts', { keyPath: 'id' });

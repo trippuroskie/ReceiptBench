@@ -1,12 +1,12 @@
 {
-  "name": "lensbench",
+  "name": "receiptbench",
   "version": "0.0.0",
   "private": true,
   "description": "Benchmarking harness for OCR pipelines built on vision LLMs - compare accuracy, inference time, and cost across models and prompt versions.",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/trippuroskie/LensBench.git"
+    "url": "https://github.com/trippuroskie/ReceiptBench.git"
   },
   "keywords": [
     "ocr",

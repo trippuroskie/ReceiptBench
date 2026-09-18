@@ -1,4 +1,4 @@
-<h1 align="center">LensBench</h1>
+<h1 align="center">ReceiptBench</h1>
 
 <p align="center">
   <strong>A benchmarking harness for OCR pipelines built on vision LLMs.</strong><br>
@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <img src="docs/screenshots/01-dashboard.png" alt="LensBench dashboard showing aggregate accuracy, inference time and cost across 162 benchmark runs" width="100%">
+  <img src="docs/screenshots/01-dashboard.png" alt="ReceiptBench dashboard showing aggregate accuracy, inference time and cost across 162 benchmark runs" width="100%">
 </p>
 
 ---
@@ -26,7 +26,7 @@ you try one on a couple of images, it looks fine, and you ship it. But the model
 that reads a clean café receipt perfectly may drop line items on a dense grocery
 receipt, and the model that's 4% more accurate may cost 50× more per page.
 
-LensBench makes that trade-off measurable. Define your prompts, upload a handful
+ReceiptBench makes that trade-off measurable. Define your prompts, upload a handful
 of documents with the JSON you *expect* to get back, and run the full
 cross-product of **prompt × model × document**. You get a per-field accuracy
 score for every run, plus the cost and elapsed time it took to get there.
@@ -91,8 +91,8 @@ Aggregate ranking across all runs, re-sortable by the metric you actually care a
 **Prerequisites:** Node.js **20.19+** or **22.12+** (required by `@vitejs/plugin-react` 5), and an [OpenRouter](https://openrouter.ai) account.
 
 ```bash
-git clone https://github.com/trippuroskie/LensBench.git
-cd LensBench
+git clone https://github.com/trippuroskie/ReceiptBench.git
+cd ReceiptBench
 npm install
 
 cp .env.example .env.local
@@ -113,7 +113,7 @@ above, skip the key entirely:
 3. Paste the contents of [`scripts/seed-demo-data.js`](scripts/seed-demo-data.js) and press Enter
 4. Reload
 
-To clear it again: `localStorage.clear(); indexedDB.deleteDatabase('LensBenchDB'); location.reload();`
+To clear it again: `localStorage.clear(); indexedDB.deleteDatabase('ReceiptBenchDB'); location.reload();`
 
 ### Your first real benchmark
 
@@ -129,7 +129,7 @@ iterations` billable API calls.
 ## Security
 
 > [!IMPORTANT]
-> **Your API key is exposed to the browser. Run LensBench locally only.**
+> **Your API key is exposed to the browser. Run ReceiptBench locally only.**
 
 `vite.config.ts` inlines `OPENROUTER_API_KEY` into the client bundle at build
 time, and the browser calls the OpenRouter API directly. That is fine for a
@@ -219,7 +219,7 @@ is no backend and no analytics.
 
 Two things do leave your machine:
 
-- **Document images**, sent to OpenRouter, which routes them to the model provider you selected — along with an `HTTP-Referer: http://localhost:3000` and `X-Title: LensBench` attribution header. Don't benchmark documents containing information you aren't willing to send to a third party, and check the retention policy of the providers you route to.
+- **Document images**, sent to OpenRouter, which routes them to the model provider you selected — along with an `HTTP-Referer: http://localhost:3000` and `X-Title: ReceiptBench` attribution header. Don't benchmark documents containing information you aren't willing to send to a third party, and check the retention policy of the providers you route to.
 - **Static assets.** `index.html` loads Tailwind, Font Awesome, and Google Fonts from public CDNs on every page load, so those CDNs see your IP and user agent. Vendor them locally if that matters to you.
 
 ## Adding a model

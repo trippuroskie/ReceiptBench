@@ -18,7 +18,7 @@ import CostAccuracyMatrix from './components/CostAccuracyMatrix';
 
 // Simple IndexedDB wrapper for large binary data
 const dbPromise = new Promise<IDBDatabase>((resolve, reject) => {
-  const request = indexedDB.open('LensBenchDB', 1);
+  const request = indexedDB.open('ReceiptBenchDB', 1);
   request.onupgradeneeded = () => {
     const db = request.result;
     if (!db.objectStoreNames.contains('receipts')) {

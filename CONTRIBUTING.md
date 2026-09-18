@@ -1,6 +1,6 @@
-# Contributing to LensBench
+# Contributing to ReceiptBench
 
-Thanks for your interest. LensBench is a small, dependency-light project, and
+Thanks for your interest. ReceiptBench is a small, dependency-light project, and
 the goal is to keep it that way.
 
 ## Setup
@@ -57,7 +57,7 @@ mechanics of common changes. In brief:
 
 ## Especially welcome
 
-- **A server-side proxy for the API key** — the single change that would make LensBench safely deployable.
+- **A server-side proxy for the API key** — the single change that would make ReceiptBench safely deployable.
 - Smarter accuracy scoring: numeric tolerance, fuzzy string matching, per-field weighting. `calculateAccuracy` is a pure function and easy to extend.
 - **Recording failed runs.** Errors are currently swallowed (console only) instead of surfacing in history — see Known limitations in the README.
 - **A pricing field for custom models**, so UI-added models report real cost instead of placeholder pricing.

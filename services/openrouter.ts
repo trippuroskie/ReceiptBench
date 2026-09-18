@@ -67,7 +67,7 @@ export class OpenRouterService {
         headers: {
           "Authorization": `Bearer ${this.apiKey}`,
           "HTTP-Referer": "http://localhost:3000",
-          "X-Title": "LensBench",
+          "X-Title": "ReceiptBench",
           "Content-Type": "application/json"
         },
         body: JSON.stringify(payload),
@@ -150,7 +150,7 @@ ${actualOutput}
         headers: {
           "Authorization": `Bearer ${this.apiKey}`,
           "HTTP-Referer": "http://localhost:3000",
-          "X-Title": "LensBench",
+          "X-Title": "ReceiptBench",
           "Content-Type": "application/json"
         },
         body: JSON.stringify(payload)
